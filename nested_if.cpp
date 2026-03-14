@@ -18,3 +18,27 @@ string Status_lulus(float r)
     else
         return "Gagal";
 }
+
+//fungsi utama dari program ini, dimana kita akan meminta user untuk memasukkan nilai Bahasa Inggris dan Matematika, kemudian kita akan menghitung rata-rata dari kedua nilai tersebut menggunakan fungsi Rata_rata, dan terakhir kita akan mengecek status kelulusan menggunakan fungsi Status_lulus dan mencetak hasilnya ke layar.
+int main()
+{
+    float nilBI, nilMT, rerata;
+    string status;
+
+    cout << "Masukkan Nilai Bahasa Inggris = ";
+    cin >> nilBI;
+    cout << "Masukkan Nilai Matematika = ";
+    cin >> nilMT;
+
+    //rerata = (nilBI + nilMT) / 2;
+    //if (rerata >= 60){
+    //    status = "Lolos";
+    //else
+    //    status = "Gagal";
+
+    rerata = Rata_rata(nilBI, nilMT);
+    //status = Status_lulus(reata);
+
+    cout << "Status Kelulusan: " << Status_lulus(rerata) << ", dengan nilai rerata = "<<rerata<< endl;
+    return 0;
+}
