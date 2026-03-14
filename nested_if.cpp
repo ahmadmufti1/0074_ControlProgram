@@ -1,41 +1,7 @@
 #include <iostream>
 using namespace std;
 
+//mendeklarasikan fungsi untuk menghitung rata-rata dari dua nilai, fungsi ini akan menerima dua parameter bertipe float dan mengembalikan hasil rata-rata dari kedua nilai tersebut.
 float Rata_rata(float a, float b) {
     return (a + b) / 2;
-}
-
-string Status_lulus(float r)
-{
-    if (r >= 60)
-        if (r > 80){
-            return "Lulus Cumlaude";
-        }else{
-            return "Lulus Baik";
-        }
-    else
-        return "Gagal";
-}
-
-int main()
-{
-    float nilBI, nilMT, rerata;
-    string status;
-
-    cout << "Masukkan Nilai Bahasa Inggris = ";
-    cin >> nilBI;
-    cout << "Masukkan Nilai Matematika = ";
-    cin >> nilMT;
-
-    //rerata = (nilBI + nilMT) / 2;
-    //if (rerata >= 60){
-    //    status = "Lolos";
-    //else
-    //    status = "Gagal";
-
-    rerata = Rata_rata(nilBI, nilMT);
-    //status = Status_lulus(reata);
-
-    cout << "Status Kelulusan: " << Status_lulus(rerata) << ", dengan nilai rerata = "<<rerata<< endl;
-    return 0;
 }
